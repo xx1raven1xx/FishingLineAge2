@@ -54,20 +54,19 @@ Return
 #w::
 Xt := X2 - X1  ; длина прогресбара
 Yt := (Y1+Y2)//2  ; среднее значение координаты Y
-; MsgBox, %Xt% `n%Yt%
 X_dt := X1 + Xt//2  ; координата половины прогресбара
 hesteresis := 2
 loop
 {
 if (((result1+hesteresis) > result) and ((result1-hesteresis) < result))
 {
-  ;send {F2}
+  send {F2}
   ToolTip F2
   sleep 5000 ; Тут требуется подобрать правильную задержку, так как у скила есть кд
 }
 else
 {
-  ;send {F3}
+  send {F3}
   ToolTip F3
   sleep 5000 ; Тут требуется подобрать правильную задержку, так как у скила есть кд
   result1 := result
